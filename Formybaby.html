@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial=scale=10">
+<title>Iwabyuu</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffd6e7#f8b8d0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+   background: #fffafa;
+   width: 100%;
+   max-width: 450px;
+   padding: 30px;
+   border-radius: 20px;
+   box-shadow: 0 10px 30px #b45b8060;
+   text-align: center;
+}
+
+h1 {
+    color: #d94f87;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #9b647b;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+  .question {
+    background: #ffe4ef;
+    color: #b83e70;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 12px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.question:hover {
+    background: #ffc5dd;
+    transform: scale(1.02);
+}
+
+.answer {
+    display: none;
+    padding: 15px;
+    color: #704052;
+    background: #fff0f5;
+    border-radius: 10px;
+    margin-top: 5px;
+    line-height: 1.6;
+}
+
+.final {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #ffe4ef
+    border-radius: 15px;
+    color: #c13c76;
+    line-height: 1.7;
+}
+
+button {
+    border: none;
+    background: #e879a5
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px; 
+    font-sixe: 15px;
+}
+
+button:hover {
+    background: #d94f87;
+}
+
+.heart {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cointainer">
+
+    <div class="heart"> </div>
+
+    <h1>Dear Babi...</h1>
+    <p class="subtitle">I want to tell you something:></p>
+
+    <div class="question" onclick="showAnswer(0)">
+        Q1. Why am i writing this?
+    </div>
+    <div class="answer">
+        Because this message is something very meaningful for me.
+        And i want you to know it>3.
+    </div>
+
+    <div class="question" onclick="showAnswer(1)">
+        Q2. Do i have a secret?
+    </div>
+    <div class="answer">
+        Yes. Something i've been hiding for months.
+    </div>
+
+    <div class="question" onclick="showAnswer(2)">
+        Q3. What is my secret?
+    </div>
+    <div class="answer">
+        Next Question MWEHEHEHEH!
+    </div>
+
+    <div class="question" onclick="showAnswer(3)">
+         Q4. Is it even important for you to know?
+    </div>
+    <div class="answer">
+        Just kidding babi ofcourse it's important
+        for you to know it^^
+    </div>
+
+    <div class="question" onclick="showAnswer(5)">
+        Q5. Should i give you a hint?
+    </div>
+    <div class="answer">
+         HMMMM okay maybe i should since im being nice today:D
+    </div>
+
+    <div class="question" onclick="showAnswer(6)">
+        Q6. But first, Are you happy?
+    </div>
+    <div class="answer">
+        If you are happy with leaa, Leaa is happy with her reki
+       You don't know how much i love ypu and willing to do what's
+      keeping within me.
+    </div>
+
+   <button onclick="showFinal()">Open Me</button>
+
+   <div class="final" id="finalMessage">
+       <h2>Hint GRRR</h2>
+       <br>
+        It was a few months ago since i've been thinking of it
+       <br><br>
+        I don't know if you will be happy, but really im so excited to
+        tell you about it, it's not just the right time yet babi
+       <br><br>
+       <b>From Bebe Leaa</b>
+    </div>
+  
+</div>
+
+<script>
+function showAnswer(number) {
+    const answers = document.querySelectorAll(".answer");
+    answers[number].style.display = 
+        answers[number].style.display === "block";
+        ? "none" : "block";
+}
+
+function showFinal() {...}
+  </script>
+  
+</body>
+</html>
